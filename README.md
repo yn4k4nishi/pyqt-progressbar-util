@@ -1,4 +1,4 @@
-# PyQt ProgressBar Utils
+# PyQt ProgressBar Util
 use PyQt ProgressBar like tqdm
 
 ## Install
