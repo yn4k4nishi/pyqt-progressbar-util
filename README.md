@@ -11,6 +11,8 @@ pip install -r requirement.txt
 python3 main.py
 ```
 
+![](example.gif)
+
 ## Usage
 ```python
 from progress_bar_util import ProgressBarUtil
