@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self.ui.pushButtonStart.setDisabled(True)
         
         for p in ProgressBarUtil(range(7), self.ui.progressBar):
-            time.sleep(1)
+            time.sleep(0.5)
 
         self.ui.pushButtonStart.setEnabled(True)
 
