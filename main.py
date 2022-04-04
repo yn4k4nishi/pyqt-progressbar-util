@@ -1,3 +1,4 @@
+from concurrent.futures import process
 import sys
 import time
 from PyQt5.QtCore import *
@@ -15,16 +16,22 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.show()
 
-        self.ui.pushButtonStart.clicked.connect(self.process)
+        self.ui.pushButtonStart.clicked.connect(self.start)
     
-    def process(self):
+    def start(self):
         self.ui.pushButtonStart.setDisabled(True)
+
+        sweep = ProgressBarUtil(range(7), self.ui.progressBar)
+
+        for s in sweep:
+            self.process(s)
         
-        for p in ProgressBarUtil(range(7), self.ui.progressBar):
-            time.sleep(0.5)
 
         self.ui.pushButtonStart.setEnabled(True)
 
+    def process(self, s):
+        print(s)
+        time.sleep(0.5)
 
 
 if __name__ == "__main__":

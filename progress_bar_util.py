@@ -16,7 +16,7 @@ class ProgressBarUtil(object):
         self.val += 1
         self.progress_bar.setValue(self.val/self.max * 100)
 
-        if self.val >= self.max:
+        if self.val > self.max:
             raise StopIteration()
 
         
