@@ -25,7 +25,9 @@ class MainWindow(QMainWindow):
 
         for s in sweep:
             self.process(s)
-        
+
+        for s in sweep:
+            self.process(s)        
 
         self.ui.pushButtonStart.setEnabled(True)
 
